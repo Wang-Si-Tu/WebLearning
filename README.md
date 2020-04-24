@@ -1,2 +1,2 @@
 # WebLearning
-springboot+vue
+vue
