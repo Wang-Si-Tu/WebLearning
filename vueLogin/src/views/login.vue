@@ -37,6 +37,7 @@
         .then(response=>{
             if(response.data=="Success") this.$message({message:"登录成功",type:"success",showClose:true});
             if(response.data=="Fail") this.$message({message:"用户名或密码错误",type:"error",showClose:true});
+            else this.$message({message:"后端未部署或网络异常",type:"error",showClose:true});
           }
         )
         // this.$message.error("")
@@ -46,7 +47,7 @@
   }
 </script>
 
-<style>
+<style scoped>
   .login{
     margin-top: 200px;
   }

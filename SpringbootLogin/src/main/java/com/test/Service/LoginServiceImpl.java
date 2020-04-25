@@ -13,7 +13,7 @@ public class LoginServiceImpl implements LoginService {
     public String login(Users user) {
         //System.out.println(user.getAccount()+" "+user.getPassword());
         Users queryResult=usersRepository.findByAccount(user.getAccount());
-        System.out.println(queryResult.getAccount()+" "+queryResult.getPassword());
+        //System.out.println(queryResult.getAccount()+" "+queryResult.getPassword());
         if(queryResult==null){
             return "Fail";
         }
