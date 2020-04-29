@@ -35,7 +35,10 @@
           password:this.password
         })
         .then(response=>{
-          if(response.data=="Success") this.$message({message:"登录成功",type:"success",showClose:true});
+          if(response.data=="Success") {
+            this.$message({message:"登录成功",type:"success",showClose:true});
+            this.$router.push({path:'/mainInterface'});
+          }
           if(response.data=="Fail") this.$message({message:"用户名或密码错误",type:"error",showClose:true});
           // else this.$message({message:"后端未部署或网络异常",type:"error",showClose:true});
         })

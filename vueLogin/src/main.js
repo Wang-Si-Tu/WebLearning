@@ -6,6 +6,8 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import router from './router'
 import axios from 'axios'
+import sideBar from "./components/sideBar";
+Vue.component('sideBar', sideBar);
 Vue.use(ElementUI)
 Vue.prototype.$axios=axios
 axios.defaults.baseURL='http://localhost:8888/api'
@@ -15,6 +17,9 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
-  components: { App },
+  components: {
+    App,
+    sideBar
+  },
   template: '<App/>'
 })
